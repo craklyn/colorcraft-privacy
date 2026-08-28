@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ColorCraft — Privacy Policy</title>
+<!-- No analytics, no fonts, no third-party requests of any kind. A privacy
+     policy that phoned home would be a poor advertisement for itself. -->
+<style>
+  :root { color-scheme: light dark; --ink:#1d1b20; --dim:#5b5761; --bg:#fdf7ff;
+           --line:#e2dbe8; --accent:#6750a4; }
+  @media (prefers-color-scheme: dark) {
+    :root { --ink:#e8e0e8; --dim:#a9a2b0; --bg:#141218; --line:#332f38;
+             --accent:#cfbcff; }
+  }
+  body { margin:0 auto; padding:2.5rem 1.25rem 5rem; max-width:44rem;
+          background:var(--bg); color:var(--ink); line-height:1.65;
+          font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; }
+  h1 { font-size:2rem; line-height:1.2; margin:0 0 .25rem; }
+  h2 { font-size:1.25rem; margin:2.5rem 0 .5rem; }
+  p { margin:.75rem 0; }
+  code { background:color-mix(in srgb, var(--accent) 12%, transparent);
+          padding:.1em .35em; border-radius:.25rem; font-size:.9em; }
+  a { color:var(--accent); }
+  table { width:100%; border-collapse:collapse; margin:1rem 0; font-size:.95rem;
+           display:block; overflow-x:auto; }
+  th,td { text-align:left; padding:.55rem .6rem; border-bottom:1px solid var(--line);
+           vertical-align:top; }
+  th { font-weight:600; color:var(--dim); }
+  footer { margin-top:3rem; padding-top:1rem; border-top:1px solid var(--line);
+            color:var(--dim); font-size:.875rem; }
+</style>
+</head>
+<body>
+<h1>ColorCraft — Privacy Policy</h1>
+<p><strong>Last updated: 27 August 2026</strong></p>
+<h2>The short version</h2>
+<p>ColorCraft turns what a child types, says, or photographs into a black-and-white colouring page. To do that, the words and any photo they choose are sent to an AI service that draws the picture, and the picture comes back.</p>
+<p>We do not ask for a name, an email address, or an account. We do not show ads. We do not use analytics or tracking of any kind. We do not sell anything about anyone, ever.</p>
+<p>The one thing worth knowing before handing the app to a child: <strong>a photo they pick is uploaded to our service and passed to OpenAI to be turned into a drawing.</strong> It is not stored by us. If that is not something you want, simply do not use the photo button — everything else works from typed or spoken words.</p>
+<h2>What we store</h2>
+<p>On our server we keep a small record for each installation, so the app knows how many pictures are left:</p>
+<table><thead><tr>
+<th>What</th>
+<th>Why</th>
+</tr></thead><tbody>
+<tr><td>A random installation ID</td><td>Identifies this installation. Not linked to you or your device.</td></tr>
+<tr><td>A short code (e.g. <code>AB12-CD34</code>)</td><td>So a grown-up can be given pictures by a friend</td></tr>
+<tr><td>A hashed secret</td><td>Lets the app prove it is the same installation next time</td></tr>
+<tr><td>The platform (<code>ios</code> / <code>android</code>)</td><td>Support and diagnostics</td></tr>
+<tr><td>Whether the install passed a device check</td><td>Stops one person claiming free pictures endlessly</td></tr>
+<tr><td>Pictures remaining, and a log of changes</td><td>Running the credit system</td></tr>
+<tr><td>When the install was first and last seen</td><td>Housekeeping</td></tr>
+</tbody></table>
+<p>That is the complete list. The record contains nothing that identifies a person.</p>
+<p>We also keep a record of <strong>how each drawing session went</strong>, so we can see where the app helps and where it gets in the way: the broad category asked for (<code>animals</code>, <code>space</code>, <code>vehicles</code> and so on, chosen from a fixed list in our code), what kind of step each request was, whether each one worked, and the date. There is no time of day and nothing written by a child — the category comes from a fixed list, so it cannot contain a name or a place.</p>
+<p><strong>These records are not linked to an installation.</strong> They are labelled with a random session number, so they describe a drawing session rather than a person, and there is no way for us to tell which sessions belong to the same child.</p>
+<h2>What we do not collect</h2>
+<p>No name, email address, phone number, postal address, date of birth, or account of any kind. No contacts, no location, no advertising identifier. No analytics, no crash reporting, no third-party trackers or SDKs for either. No behavioural profiling and no advertising, so nothing here is used to target anyone.</p>
+<h2>What leaves the device, and where it goes</h2>
+<p><strong>Typed words and chosen photos.</strong> These go to our service, which passes them to <strong>OpenAI</strong> to generate the picture. We do not store either: our database has no field for them, and we keep no image storage at all. The words are used once, in passing, to pick the broad category described above — the words themselves are then gone. OpenAI processes them under its own API policy and may retain content briefly for safety and abuse monitoring before deleting it.</p>
+<p><strong>Spoken words</strong>, only if the microphone button is used. Speech is turned into text by <strong>Apple</strong> (on iOS) or <strong>Google</strong> (on Android) using the device&#x27;s own dictation service. We never receive the audio, only the text the device produces, which is then treated exactly like typed words.</p>
+<p><strong>A device check.</strong> On launch the app asks <strong>Apple App Attest</strong> or <strong>Google Play Integrity</strong>, via <strong>Firebase App Check</strong>, to confirm it is a genuine unmodified app. This returns a yes/no style token, not information about you. It exists so free pictures cannot be farmed by automated installs.</p>
+<p>Nothing else leaves the device. Pictures are shared or printed only when someone chooses to, and then only to wherever they choose to send them.</p>
+<h2>Third parties we rely on</h2>
+<table><thead><tr>
+<th>Who</th>
+<th>What they do</th>
+<th>Their policy</th>
+</tr></thead><tbody>
+<tr><td>OpenAI</td><td>Generates pictures from words and photos</td><td><a href="https://openai.com/policies/privacy-policy">https://openai.com/policies/privacy-policy</a></td></tr>
+<tr><td>Cloudflare</td><td>Hosts our service and its small database</td><td><a href="https://www.cloudflare.com/privacypolicy/">https://www.cloudflare.com/privacypolicy/</a></td></tr>
+<tr><td>Google Firebase</td><td>App Check device verification</td><td><a href="https://firebase.google.com/support/privacy">https://firebase.google.com/support/privacy</a></td></tr>
+<tr><td>Apple / Google</td><td>Speech-to-text, and app distribution</td><td>Their published policies</td></tr>
+</tbody></table>
+<p>We have no other processors, and no advertising or analytics partners.</p>
+<h2>What stays on the device</h2>
+<p>Finished pictures, the history of a session, and any doodles are stored <strong>only on the device</strong>. They are never uploaded except as part of making the next picture. Deleting the app deletes all of them.</p>
+<h2>Children</h2>
+<p>ColorCraft is made for children, and it is built so that a child cannot hand over personal information: there is nothing to sign up for and nothing to fill in. The app never asks a child for their name, age, or any other detail about themselves.</p>
+<p>Settings that affect money or a grown-up&#x27;s decisions sit behind a simple arithmetic gate intended to be answered by an adult.</p>
+<p>The installation record above exists to run the service and prevent abuse — authenticating the installation, tracking remaining pictures, and stopping the free allowance being farmed. It is not used to build a profile, to advertise, or for any purpose beyond operating the app.</p>
+<p><strong>A parent should know that a photo, if one is chosen, leaves the device.</strong> That is the only content that does. The photo button can simply be left unused.</p>
+<h2>Keeping and deleting data</h2>
+<p>The installation record is kept while the installation exists, because it holds the remaining picture count. Deleting the app removes everything stored on the device; the small server-side record remains until removed on request.</p>
+<p>To have an installation record deleted, send us the short code shown on the grown-ups screen and we will delete it. We cannot find a record without that code, because we hold nothing else that connects it to anyone.</p>
+<h2>Changes</h2>
+<p>If this policy changes, the date at the top changes with it, and the current version always lives at this address.</p>
+<h2>Contact</h2>
+<p><a href="mailto:colorcraft.young.artist@gmail.com">colorcraft.young.artist@gmail.com</a></p>
+<p>Published by ColorCraft.</p>
+<footer>ColorCraft · this page is generated from the app's own source, so it
+describes what the software actually does.</footer>
+</body>
+</html>
