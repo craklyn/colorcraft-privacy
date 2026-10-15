@@ -1,6 +1,6 @@
-# ColorCraft — privacy policy
+# Sketchino — privacy policy
 
-The published privacy policy for **ColorCraft Young Artist**, served at
+The published privacy policy for **Sketchino** (formerly ColorCraft Young Artist), served at
 https://craklyn.github.io/colorcraft-privacy/
 
 `index.html` is **generated**. The source of truth is `docs/privacy_policy.md`
